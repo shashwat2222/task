@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <form method="post" action="{% url 'signup' %}">
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="full name"><br>
+        <input type="email" name="email" placeholder="email id"><br>
+        <input type="number" name="mno" placeholder="mobile no."><br>
+        <input type="password" name="password1" placeholder="password"><br>
+        <input type="password" name="password2" placeholder="confirm password"><br>
+        <button type="submit">submit</button>
+
+    </form>
+<h2>thanks for signup {{ data.name }}</h2>
+</body>
+</html>
